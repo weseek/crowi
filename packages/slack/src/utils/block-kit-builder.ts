@@ -67,7 +67,9 @@ export function inputBlock(
  * Button element
  * https://api.slack.com/reference/block-kit/block-elements#button
  */
-export function buttonElement(text: string, actionId: string, style?: string): Button {
+export function buttonElement({
+  text, actionId, style, value,
+}:{text: string, actionId: string, style?: string, value?:string}): Button {
   const button: Button = {
     type: 'button',
     text: {
@@ -75,6 +77,7 @@ export function buttonElement(text: string, actionId: string, style?: string): B
       text,
     },
     action_id: actionId,
+    value,
   };
   if (style === 'primary' || style === 'danger') {
     button.style = style;
