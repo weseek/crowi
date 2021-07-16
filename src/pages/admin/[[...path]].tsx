@@ -19,6 +19,7 @@ import CustomizeSettingContents from '~/components/Admin/Customize/CustomizeSett
 import DataImportPageContents from '~/components/Admin/DataImport/DataImportPageContents';
 import { ExportArchiveDataPage } from '~/components/Admin/DataExport/ExportArchiveDataPage';
 import UserGroupPage from '~/components/Admin/UserGroup/UserGroupPage';
+import ElasticsearchManagement from '~/components/Admin/ElasticsearchManagement/ElasticsearchManagement';
 
 import {
   useCurrentUser,
@@ -103,7 +104,7 @@ const AdminMarkdownSettingsPage: NextPage<Props> = (props: Props) => {
     },
     search: {
       title: useCustomTitle(props, t('Full Text Search Management')),
-      component: <></>,
+      component: <ElasticsearchManagement />,
     },
   };
 
