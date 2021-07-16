@@ -18,6 +18,7 @@ import MarkDownSettingContents from '~/components/Admin/Markdown/MarkDownSetting
 import CustomizeSettingContents from '~/components/Admin/Customize/CustomizeSettingContents';
 import DataImportPageContents from '~/components/Admin/DataImport/DataImportPageContents';
 import { ExportArchiveDataPage } from '~/components/Admin/DataExport/ExportArchiveDataPage';
+import UserGroupPage from '~/components/Admin/UserGroup/UserGroupPage';
 
 import {
   useCurrentUser,
@@ -98,7 +99,7 @@ const AdminMarkdownSettingsPage: NextPage<Props> = (props: Props) => {
     },
     'user-groups': {
       title: useCustomTitle(props, t('UserGroup Management')),
-      component: <></>,
+      component: <UserGroupPage />,
     },
     search: {
       title: useCustomTitle(props, t('Full Text Search Management')),

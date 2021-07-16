@@ -57,7 +57,9 @@ class UserGroupDeleteModal extends React.Component {
 
     this.state = this.initialState;
 
-    this.xss = window.xss;
+    if (typeof window !== "undefined") {
+      this.xss = window.xss;
+    }
 
     this.onHide = this.onHide.bind(this);
     this.handleActionChange = this.handleActionChange.bind(this);

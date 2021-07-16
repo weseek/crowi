@@ -16,7 +16,7 @@ export type UserGroupRelation = {
 
 export type UserGroup = {
   _id: string,
-  userGroupId:string;
+  userGroupId: string;
   name: string;
   createdAt: Date;
 }
