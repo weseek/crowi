@@ -26,7 +26,7 @@ module.exports = () => {
   handler.togetterMessageBlocks = function() {
     return [
       inputBlock(this.togetterCheckboxesElement(), 'selected_messages', 'Select massages to use.'),
-      actionsBlock(buttonElement('Show more', 'togetterShowMore')),
+      actionsBlock(buttonElement('Show more', 'showMoreTogetterResults')),
       inputBlock(this.togetterInputBlockElement('page_path', '/'), 'page_path', 'Page path'),
       actionsBlock(buttonElement('Cancel', 'togetterCancelPageCreation'), buttonElement('Create page', 'togetterCreatePage', 'primary')),
     ];
@@ -45,7 +45,7 @@ module.exports = () => {
     const options = [];
     // temporary code
     for (let i = 0; i < 10; i++) {
-      const option = checkboxesElementOption('*username*  12:00PM', 'sample slack messages ... :star:', `selected-${i}`);
+      const option = checkboxesElementOption('username  12:00 PM', 'sample slack messages ... :star:\nsample slack messages ... :star:\n', `selected-${i}`);
       options.push(option);
     }
     return options;

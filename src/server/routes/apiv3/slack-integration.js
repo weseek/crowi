@@ -148,12 +148,8 @@ module.exports = (crowi) => {
         await crowi.slackBotService.showEphemeralSearchResults(client, body, args, newOffset);
         break;
       }
-      case 'togetterShowMore': {
-        console.log('Show more here');
-        break;
-      }
       case 'togetterCreatePage': {
-        console.log('Create page and delete the original message here');
+        await crowi.slackBotService.togetterCreatePageInGrowi(client, payload);
         break;
       }
       case 'togetterCancelPageCreation': {
